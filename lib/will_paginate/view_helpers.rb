@@ -97,11 +97,11 @@ module WillPaginate
 
     # Renders a message containing number of displayed vs. total entries.
     #
-    #   <%= page_entries_info @posts %>
+    #   <%= will_paginate_page_entries_info @posts %>
     #   #-> Displaying posts 6 - 12 of 26 in total
     #
     # The default output contains HTML. Use ":html => false" for plain text.
-    def page_entries_info(collection, options = {})
+    def will_paginate_page_entries_info(collection, options = {})
       model = options[:model]
       model = collection.first.class unless model or collection.empty?
       model ||= 'entry'

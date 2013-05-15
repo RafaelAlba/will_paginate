@@ -33,7 +33,7 @@ module WillPaginate
       super(collection, options).try(:html_safe)
     end
 
-    def page_entries_info(collection = nil, options = {}) #:nodoc:
+    def will_paginate_page_entries_info(collection = nil, options = {}) #:nodoc:
       options, collection = collection, nil if collection.is_a? Hash
       collection ||= infer_collection_from_controller
 

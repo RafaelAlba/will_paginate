@@ -48,14 +48,14 @@ describe WillPaginate::ViewHelpers do
     end
   end
   
-  describe "page_entries_info" do
+  describe "will_paginate_page_entries_info" do
     before :all do
       @array = ('a'..'z').to_a
     end
 
     def info(params, options = {})
       collection = Hash === params ? @array.paginate(params) : params
-      page_entries_info collection, {:html => false}.merge(options)
+      will_paginate_page_entries_info collection, {:html => false}.merge(options)
     end
 
     it "should display middle results and total count" do
